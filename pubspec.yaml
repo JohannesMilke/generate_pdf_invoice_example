@@ -1,0 +1,30 @@
+name: generate_pdf_invoice_example
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+
+  # create pdf document
+  pdf: ^3.1.0
+
+  # save file
+  path_provider: ^2.0.1
+
+  # open pdf document
+  open_file: ^3.1.0
+
+  # format dates for invoice
+  intl: ^0.17.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
