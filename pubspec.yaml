@@ -21,6 +21,7 @@ dependencies:
 
   # format dates for invoice
   intl: ^0.17.0
+  path: ^1.8.0
 
 dev_dependencies:
   flutter_test:
