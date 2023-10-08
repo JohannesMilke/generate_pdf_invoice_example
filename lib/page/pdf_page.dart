@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:generate_pdf_invoice_example/api/pdf_api.dart';
-import 'package:generate_pdf_invoice_example/api/pdf_invoice_api.dart';
-import 'package:generate_pdf_invoice_example/main.dart';
-import 'package:generate_pdf_invoice_example/model/customer.dart';
-import 'package:generate_pdf_invoice_example/model/invoice.dart';
-import 'package:generate_pdf_invoice_example/model/supplier.dart';
-import 'package:generate_pdf_invoice_example/widget/button_widget.dart';
-import 'package:generate_pdf_invoice_example/widget/title_widget.dart';
+import '../api/pdf_api.dart';
+import '../api/pdf_invoice_api.dart';
+import '../main.dart';
+import '../model/customer.dart';
+import '../model/invoice.dart';
+import '../model/supplier.dart';
+import '../widget/button_widget.dart';
+import '../widget/title_widget.dart';
 
 class PdfPage extends StatefulWidget {
+  const PdfPage({super.key});
+
   @override
-  _PdfPageState createState() => _PdfPageState();
+  State<PdfPage> createState() => _PdfPageState();
 }
 
 class _PdfPageState extends State<PdfPage> {
@@ -18,16 +20,16 @@ class _PdfPageState extends State<PdfPage> {
   Widget build(BuildContext context) => Scaffold(
         backgroundColor: Colors.black,
         appBar: AppBar(
-          title: Text(MyApp.title),
+          title: Text(MainApp.title),
           centerTitle: true,
         ),
         body: Container(
-          padding: EdgeInsets.all(32),
+          padding: const EdgeInsets.all(32),
           child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                TitleWidget(
+                const TitleWidget(
                   icon: Icons.picture_as_pdf,
                   text: 'Generate Invoice',
                 ),
@@ -36,15 +38,15 @@ class _PdfPageState extends State<PdfPage> {
                   text: 'Invoice PDF',
                   onClicked: () async {
                     final date = DateTime.now();
-                    final dueDate = date.add(Duration(days: 7));
+                    final dueDate = date.add(const Duration(days: 7));
 
                     final invoice = Invoice(
-                      supplier: Supplier(
+                      supplier: const Supplier(
                         name: 'Sarah Field',
                         address: 'Sarah Street 9, Beijing, China',
                         paymentInfo: 'https://paypal.me/sarahfieldzz',
                       ),
-                      customer: Customer(
+                      customer: const Customer(
                         name: 'Apple Inc.',
                         address: 'Apple Street, Cupertino, CA 95014',
                       ),
