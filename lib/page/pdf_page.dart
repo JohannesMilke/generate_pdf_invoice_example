@@ -106,7 +106,7 @@ class _PdfPageState extends State<PdfPage> {
                         ),
                       ],
                     );
-
+PdfView
                     final pdfFile = await PdfInvoiceApi.generate(invoice);
 
                     PdfApi.openFile(pdfFile);
